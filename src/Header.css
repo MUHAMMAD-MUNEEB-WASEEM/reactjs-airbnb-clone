@@ -1,0 +1,39 @@
+.header{
+    display: flex;/*to make everything in single row*/
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;/*to make header sticky*/
+    top: 0;
+    z-index: 100;/*top of everything*/
+    width: 100%;
+    background-color: white;
+}
+
+.header__icon{
+    object-fit: contain;/*not stretch*/
+    height: 100px;
+    margin-left: 20px;
+}
+
+.header__center{
+    display: flex;/*to make this occupy complete row*/
+    align-items: center;/*search bar and icon align center*/
+    flex: 1;/*it will occupy whole complete space*/
+    max-width: fit-content;
+    border: 1px solid lightgray;
+    border-radius: 999px;
+    height: 30px;
+}
+
+.header__center > input{
+    border: none;
+    outline-width: 0;
+      /* width: 250px; */
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:18vw;
+    margin-right: 80px;   
+}
