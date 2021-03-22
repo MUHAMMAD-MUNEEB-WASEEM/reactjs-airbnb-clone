@@ -7,6 +7,7 @@ import PeopleIcon from '@material-ui/icons/People';
 
 //DATE IMPORT
 import { DateRangePicker } from 'react-date-range';
+import { useHistory } from 'react-router';
 
 
 
@@ -23,6 +24,9 @@ function Search() {
         endDate:endDate,
         key:"selection",
     };
+
+    //For redirecting to search page
+    const history = useHistory();
 
     //Function for date Selection
     function handleSelect(ranges) {
@@ -50,8 +54,10 @@ function Search() {
              type="number"
              />
 
-             <Button>
-                 Airbnb
+             <Button
+             onClick={()=>history.push('/search')}
+             >
+                Airbnb
              </Button>
         
         </div>
